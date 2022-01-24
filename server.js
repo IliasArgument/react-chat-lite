@@ -65,7 +65,7 @@ io.on('connection', (socket) => {
     console.log('user connected', socket.id);
 });
 console.log(process.env.PORT, 'process en 99 99 99')
-server.listen(3000, (err) => {
+server.listen((process.env.PORT || 3000), (err) => {
     if (err) {
         throw Error(err);
     }
